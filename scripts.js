@@ -1,12 +1,12 @@
-const botaoconversor = document.querySelector(".botaoconversor")
+const botaoconversor = document.querySelector(".botao-conversor")
+
 
 function conversordevalores() {
     const valordoinput = document.querySelector(".valor").value
+    const valoraserconvertido = document.querySelector(".valor-a-converter")
+    const valorconvertido = document.querySelector(".valor-a-ser-convertido")
 
-    const dolardodia = 5
-
-    const valorconvertido = valordoinput / dolardodia
-    console.log(valorconvertido)
+    valoraserconvertido.innerHTML = valordoinput
 }
 
 botaoconversor.addEventListener("click", conversordevalores)
