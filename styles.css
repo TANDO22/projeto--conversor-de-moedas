@@ -50,7 +50,7 @@ input {
     height: 42px;
 }
 
-button {
+.botaoconversor {
     width: 327px;
     height: 72px;
     background-color: #772FD3;
@@ -61,6 +61,7 @@ button {
     font-size: 18px;
     border: none;
     cursor: pointer;
+    border-radius: 10px;
 }
 
 section {
