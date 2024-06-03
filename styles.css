@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    background-color: #8A51FC;
+}
+
+.imagem-logo {
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin-left: 42%;
+}
+
+.div-principal {
+    background-color: #F4F4F4;
+    display: block;
+    width: 375px;
+    height: 750px;
+    border-radius: 20px;
+    margin-left: 40%;
+    padding: 1px;
+    margin-top: 10px;
+    padding-top: 44px;
+    padding-left: 5px;
+    margin-right: 5px;
+}
+
+select, input {
+    background-color: #FFFF;
+    display: block;
+    margin-left: 20px;
+    margin-top: 0px;
+    width: 325px;
+    height: 50px;
+    padding-left: 5px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+label {
+    margin-left: 20px;
+}
+
+input {
+    height: 42px;
+}
+
+button {
+    width: 327px;
+    height: 72px;
+    background-color: #772FD3;
+    color: #FFFFFF;
+    margin-top: 44px;
+    margin-left: 20px;
+    margin-bottom: 40px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+section {
+     border:1px solid #772FD3;
+    border-radius: 20px;
+    width: 327px;
+    height: 286px;
+    margin-left: 20px;
+    padding-top: 12px;
+    padding-left: 130px;
+}
+
+.imagem-seta {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
