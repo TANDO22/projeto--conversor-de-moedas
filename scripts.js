@@ -29,4 +29,22 @@ function conversordevalores() {
     }).format(valordoinput)
 }
 
+function mudancademoeda() {
+   const infomoeda = document.querySelector(".info-moeda-dolar")
+   const imagemmoeda = document.querySelector(".imagem-bandeira-estadosunidos")
+
+   if(seletormoeda.value == "dolar") {
+     infomoeda.innerHTML = "Dólar"
+     imagemmoeda.src = "./assets/estados-unidos (1) 1.png"
+   }
+
+   if(seletormoeda.value == "euro") {
+    infomoeda.innerHTML = "Euro"
+    imagemmoeda.src = "./assets/euro.png"
+
+    conversordevalores()
+   }
+}
+
+seletormoeda.addEventListener("change", mudancademoeda)
 botaoconversor.addEventListener("click", conversordevalores)
