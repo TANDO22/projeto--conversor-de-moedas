@@ -8,6 +8,7 @@ function conversordevalores() {
 
     const dolardiario = 5.2
     const eurodiario = 6.2
+    const libradiaria = 5.4
 
     if (seletormoeda.value == "dolar") {
         valorconvertidomoedas.innerHTML = new Intl.NumberFormat("en-US", {
@@ -17,34 +18,46 @@ function conversordevalores() {
     }
 
     if (seletormoeda.value == "euro") {
-       valorconvertidomoedas.innerHTML = new Intl.NumberFormat("de-DE", {
-        style: "currency",
-        currency: "EUR"
-       }).format(valordoinput / eurodiario)
+        valorconvertidomoedas.innerHTML = new Intl.NumberFormat("de-DE", {
+            style: "currency",
+            currency: "EUR"
+        }).format(valordoinput / eurodiario)
     }
 
     valoraserconvertido.innerHTML = new Intl.NumberFormat("pt-BR", {
         style: "currency",
         currency: "BRL"
     }).format(valordoinput)
+
+    if (seletormoeda.value == "libra") {
+        valorconvertidomoedas.innerHTML = new Intl.NumberFormat("en-GP", {
+            style: "currency",
+            currency: "GBP"
+        }).format(valordoinput / libradiaria)
+    }
 }
 
-function mudancademoeda() {
-   const infomoeda = document.querySelector(".info-moeda-dolar")
-   const imagemmoeda = document.querySelector(".imagem-bandeira-estadosunidos")
+function mudancademoedadolar() {
+    const infomoedadolar = document.querySelector(".info-moeda-dolar")
+    const imagemmoedadolar = document.querySelector(".imagem-bandeira-estadosunidos")
 
-   if(seletormoeda.value == "dolar") {
-     infomoeda.innerHTML = "Dólar"
-     imagemmoeda.src = "./assets/estados-unidos (1) 1.png"
-   }
+    if (seletormoeda.value == "dolar") {
+        infomoedadolar.innerHTML = "Dólar"
+        imagemmoedadolar.src = "./assets/estados-unidos (1) 1.png"
+    }
 
-   if(seletormoeda.value == "euro") {
-    infomoeda.innerHTML = "Euro"
-    imagemmoeda.src = "./assets/euro.png"
+    if (seletormoeda.value == "euro") {
+        infomoedadolar.innerHTML = "Euro"
+        imagemmoedadolar.src = "./assets/euro.png"
+    }
 
+    if (seletormoeda.value == "libra") {
+        infomoedadolar.innerHTML = "Libra"
+        imagemmoedadolar.src = "./assets/libra.png"
+    }
     conversordevalores()
-   }
 }
 
-seletormoeda.addEventListener("change", mudancademoeda)
+
+seletormoeda.addEventListener("change", mudancademoedadolar,)
 botaoconversor.addEventListener("click", conversordevalores)
